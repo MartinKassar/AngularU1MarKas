@@ -1,0 +1,37 @@
+
+.stylebutton:hover {
+    background: green;
+    color: #fff;
+    cursor: pointer;
+}
+
+.stylebutton, .styleremove {
+    font-size: 14px;
+    text-decoration: none;
+    color: #926239;
+    border: #926239 1px solid;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.stylebutton {
+    color: green;
+    border: green 1px solid;
+    
+}
+
+input {
+    height: 25px;
+}
+
+.styleremove {
+    color: red;
+    border: red 1px solid;
+}
+
+.styleremove:hover {
+    background: red;
+    color: #fff;
+    cursor: pointer;
+}

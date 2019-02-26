@@ -1,3 +1,9 @@
-<p>
-  editusers works!
-</p>
+<div class="form">
+      <label>name: </label>
+      <br>
+      <input  placeholder="Name" #filterName name="filterName" />
+      <br>
+    <button class="stylebutton" (click)="onClickAdd()" (click) = "filterName.value = ''" (click)="addItem()">Add</button>
+    <button class="styleremove" (click)="onClickRemove()" (click) = "filterName.value = ''" >Remove</button>
+    {{clickMessage}}
+</div>
