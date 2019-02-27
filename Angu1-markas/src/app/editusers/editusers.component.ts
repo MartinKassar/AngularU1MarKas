@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editusers.component.css']
 })
 export class EditusersComponent implements OnInit {
-  clickMessage:string = ''
+  clickMessage:string = '' //Message on button click
+  userName:string = '' //Username
 
   onClickAdd():void {
     this.clickMessage = 'You added a user'
@@ -15,6 +16,7 @@ export class EditusersComponent implements OnInit {
   onClickRemove():void {
     this.clickMessage = 'You removed a user'
   }
+
 
   constructor() { }
 

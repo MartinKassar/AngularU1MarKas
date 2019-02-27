@@ -1,4 +1,13 @@
-<div class="userlist">
-  This is the userlist
-  <app-userslistitem></app-userslistitem>
-</div>
+<!-- <div class="userlist">
+    <p>User:</p>
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user }}
+      </li>
+    </ul>
+    
+   -->
+  <ul>
+  <app-userslistitem [user]="user" *ngFor="let user of users"></app-userslistitem>
+  </ul>
+<!-- </div> -->
