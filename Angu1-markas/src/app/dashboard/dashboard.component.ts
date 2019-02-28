@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  // My array of users
-  userList = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado', 'John'];
+  
+  // My array of users containing only strings
+  userList: string[] = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado', 'John']
+  receiveEvent($event) {
+    this.userList.push($event)
+  }
+  
+  public message = ""
 
   constructor() { }
 
@@ -16,3 +22,5 @@ export class DashboardComponent implements OnInit {
   }
 
 }
+
+

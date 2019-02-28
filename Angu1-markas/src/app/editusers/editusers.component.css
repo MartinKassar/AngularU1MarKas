@@ -35,3 +35,7 @@ input {
     color: #fff;
     cursor: pointer;
 }
+
+:host {
+    box-sizing: border-box;
+}

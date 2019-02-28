@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-editusers',
@@ -6,14 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editusers.component.css']
 })
 export class EditusersComponent implements OnInit {
-  clickMessage:string = '' //Message on button click
-  userName:string = '' //Username
+  @Input() user:string []
+  @Output() public  = new EventEmitter()
 
-  onClickAdd():void {
+  
+  
+  public addUsername: string
+  clickMessage:string = '' //Message on button click
+
+  onClickAdd():any {
     this.clickMessage = 'You added a user'
+    console.log(this.addUsername)
   }
   
-  onClickRemove():void {
+  onClickRemove():any {
     this.clickMessage = 'You removed a user'
   }
 
@@ -22,5 +28,6 @@ export class EditusersComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }
