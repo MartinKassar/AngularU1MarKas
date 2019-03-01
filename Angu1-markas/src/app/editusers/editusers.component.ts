@@ -26,7 +26,7 @@ export class EditusersComponent implements OnInit {
   }
   
   // Function on button remove click
-  onClickRemove():any {
+  onClickRemove():void {
     this.removeUser.emit()
     this.clickMessage = 'You removed a user'
   }
