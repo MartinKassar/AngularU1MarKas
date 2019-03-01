@@ -13,12 +13,13 @@ export class EditusersComponent implements OnInit {
   
   public addUsername: string //Input value
   clickMessage:string = '' //Message on button click
-
+  
   // Function on button add click
   onClickAdd():void {
     if (this.addUsername != '' && this.addUsername != undefined) { //If statement to guide the user and emit on add if its not null
     this.clickMessage = 'You added a user'
     this.addUser.emit(this.addUsername)
+    this.addUsername = '';
     } else {
       this.clickMessage = 'You must add a User'
     }
@@ -29,7 +30,6 @@ export class EditusersComponent implements OnInit {
     this.removeUser.emit()
     this.clickMessage = 'You removed a user'
   }
-
 
   constructor() { }
 

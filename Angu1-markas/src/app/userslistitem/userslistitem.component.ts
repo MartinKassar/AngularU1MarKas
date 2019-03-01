@@ -9,8 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class UserslistitemComponent implements OnInit {
-  @Input() user:string //Takes in user
-  @Input() isSpecial:boolean //Takes in a boolean
+  @Input() user: string //Takes in user
+  @Input() isSpecial: boolean //Takes in a boolean
+  @Input() color: string // Takes in a color
 
 
   constructor() { }

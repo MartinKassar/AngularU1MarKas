@@ -7,14 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserslistComponent implements OnInit {
 @Input() users: string[] //Takes in Users
-isSpecial: boolean = true // A boolean set to true, that will later affect color of the list
-  constructor() { }
+letters: string = '0123456789ABCDEF'; //Collection of hexa colors
+color: string = '#'; // The hexa color combination
+constructor() { }
 
   ngOnInit() {
   }
 
-// Function that changes color based on a boolean called "isSpecial"
-changeColor():any {
-  this.isSpecial = !this.isSpecial
+// Function that changes random color, it loops trough a combo of hexa colors.
+changeColor():void {
+  this.color = '#'; 
+    for (var i = 0; i < 6; i++) {
+        this.color += this.letters[Math.floor(Math.random() * 16)];
+    }
 }
 }
+
