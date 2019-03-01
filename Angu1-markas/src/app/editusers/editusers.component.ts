@@ -6,20 +6,27 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./editusers.component.css']
 })
 export class EditusersComponent implements OnInit {
-  @Input() user:string []
-  @Output() public  = new EventEmitter()
+  @Input() user:string [] //takes in user
+  @Output() addUser  = new EventEmitter<string>() // Sends out addUser
+  @Output() removeUser = new EventEmitter<void>() // Sends out removeUser
 
   
-  
-  public addUsername: string
+  public addUsername: string //Input value
   clickMessage:string = '' //Message on button click
 
-  onClickAdd():any {
+  // Function on button add click
+  onClickAdd():void {
+    if (this.addUsername != '' && this.addUsername != undefined) { //If statement to guide the user and emit on add if its not null
     this.clickMessage = 'You added a user'
-    console.log(this.addUsername)
+    this.addUser.emit(this.addUsername)
+    } else {
+      this.clickMessage = 'You must add a User'
+    }
   }
   
+  // Function on button remove click
   onClickRemove():any {
+    this.removeUser.emit()
     this.clickMessage = 'You removed a user'
   }
 

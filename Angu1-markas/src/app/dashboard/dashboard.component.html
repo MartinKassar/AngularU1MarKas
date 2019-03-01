@@ -1,2 +1,2 @@
-<app-editusers></app-editusers>
+<app-editusers (addUser)="addUser($event)" (removeUser)= "removeUser($event)"></app-editusers>
 <app-userslist [users]="userList"></app-userslist>

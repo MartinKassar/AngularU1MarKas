@@ -1,13 +1,6 @@
-<!-- <div class="userlist">
-    <p>User:</p>
-    <ul>
-      <li *ngFor="let user of users">
-        {{ user }}
-      </li>
-    </ul>
-    
-   -->
+  <h2>Userlist:</h2>
   <ul>
-  <app-userslistitem [user]="user" *ngFor="let user of users"></app-userslistitem>
+  <app-userslistitem [user]="user" *ngFor="let user of users" [isSpecial]="isSpecial"></app-userslistitem>
   </ul>
-<!-- </div> -->
+  <button (click)="changeColor()">Change Color</button>
+

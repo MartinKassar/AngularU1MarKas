@@ -1,9 +1,7 @@
 <div class="form">
-      <label>name: </label>
+      <label><h2>name:</h2> </label>
       <br>
-      <!-- <input  placeholder="Name" #filterName name="filterName" /> -->
       <input type="text" name="title" [(ngModel)]="addUsername" placeholder="Add user...">
-      {{ addUsername }}
       <br>
     <button class="stylebutton"  (click)="onClickAdd()">Add</button>
     <button class="styleremove" (click)="onClickRemove()">Remove</button>

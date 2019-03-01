@@ -8,17 +8,24 @@ import { Component, OnInit, Output } from '@angular/core';
 export class DashboardComponent implements OnInit {
   
   // My array of users containing only strings
-  userList: string[] = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado', 'John']
-  receiveEvent($event) {
-    this.userList.push($event)
-  }
-  
-  public message = ""
+  userList: string[] = []
 
   constructor() { }
 
   ngOnInit() {
     
+  }
+  // Receives and event from "Add button" and adds the event to the array.
+  // If statement to check if input value "event" is empty or not
+  addUser(event):void {
+    if (event != null) {
+    this.userList.push(event)
+    }
+  }
+
+  // Receives an event from "Remove button" and removes a user from the array
+  removeUser():void {
+    this.userList.pop()
   }
 
 }
