@@ -52,3 +52,6 @@ input {
     box-sizing: border-box;
 }
 
+.form {
+    background: #ebeef1;
+}

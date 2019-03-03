@@ -1,4 +1,5 @@
   <h2>Userlist:</h2>
+  <div class="userlist">
   <ul class="list-group">
   <app-userslistitem [user]="user" *ngFor="let user of users" [isSpecial]="isSpecial" [color]="color"></app-userslistitem>
   </ul>
@@ -7,4 +8,5 @@
   <br>
   Color:
   {{ color }}
+  </div>
 

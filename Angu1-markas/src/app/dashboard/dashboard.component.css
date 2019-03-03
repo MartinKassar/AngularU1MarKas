@@ -12,3 +12,9 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+.list {
+    background: #ebeef1;
+    width: 150px;
+    
+}
