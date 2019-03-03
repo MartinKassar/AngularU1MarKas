@@ -7,6 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class EditusersComponent implements OnInit {
   @Input() user:string [] //takes in user
+  @Input() usersList: string []
   @Output() addUser  = new EventEmitter<string>() // Sends out addUser
   @Output() removeUser = new EventEmitter<void>() // Sends out removeUser
 
@@ -27,8 +28,12 @@ export class EditusersComponent implements OnInit {
   
   // Function on button remove click
   onClickRemove():void {
+    if(this.usersList.length > 0) {
     this.removeUser.emit()
     this.clickMessage = 'You removed a user'
+    } else {
+      this.clickMessage = 'Your list is empty'
+    }
   }
 
   constructor() { }

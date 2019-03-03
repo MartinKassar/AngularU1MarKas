@@ -9,7 +9,7 @@ export class DashboardComponent implements OnInit {
   
   // My array of users containing only strings
   userList: string[] = []
-
+  
   constructor() { }
 
   ngOnInit() {

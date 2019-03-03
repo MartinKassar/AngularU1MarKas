@@ -7,9 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserslistComponent implements OnInit {
 @Input() users: string[] //Takes in Users
-letters: string = '0123456789ABCDEF'; //Collection of hexa colors
-color: string = '#'; // The hexa color combination
-constructor() { }
+
+letters: string = '0123456789ABCDEF' //Collection of hexa colors
+color: string = '#' // The hexa color combination
+
+constructor() {
+  
+ }
 
   ngOnInit() {
   }

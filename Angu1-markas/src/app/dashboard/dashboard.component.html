@@ -1,2 +1,5 @@
-<app-editusers (addUser)="addUser($event)" (removeUser)= "removeUser($event)"></app-editusers>
-<app-userslist [users]="userList"></app-userslist>
+<h1>Angu1MarKas</h1>
+<div id="position">
+    <app-editusers (addUser)="addUser($event)" (removeUser)="removeUser($event)" [usersList]="userList"></app-editusers>
+    <app-userslist [users]="userList"></app-userslist>
+</div>
